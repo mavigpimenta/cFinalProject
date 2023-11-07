@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libcfinal.a CMakeFiles/cfinal.dir/src/events/plays.c.obj
+C:\MinGW\bin\ranlib.exe libcfinal.a

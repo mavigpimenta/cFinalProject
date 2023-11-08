@@ -10,9 +10,9 @@ void printMatrix(int * matrix, int size)
     {
         for(int j = 0; j < size; j++)
         {
-            printf("%i ", matrix[i * size + j]);
+            printf("%i\t", matrix[i * size + j]);
         }
-        printf("\n");
+        printf("\n\n\n");
     }
     printf("\n");
 }

@@ -24,7 +24,7 @@ void goRight(int * matrix, int size)
             }
         }
 
-        for(int j = 0; j < size; j++)
+        for(int j = size - 1; j > -1; j--)
         {
             for(int k = size - 1; k > - 1; k--)
             {
@@ -172,7 +172,7 @@ void goDown(int * matrix, int size)
                 }
             }
         }
-        for(int j = 0; j < size; j++)
+        for(int j = size - 1; j > -1; j--)
         {
             for(int k = size - 1; k > - 1; k--)
             {

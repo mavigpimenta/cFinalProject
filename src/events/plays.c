@@ -1,7 +1,7 @@
 #include "./events.h"
 
 
-void goRight(int * matrix, int size)
+void goRight(int * matrix, int size, int * current_score)
 {
     int received_array[size*size];
 
@@ -13,13 +13,17 @@ void goRight(int * matrix, int size)
 
             for(int k = j - 1; k > - 1; k--)
             {
-                if(matrix[i * size + k] != 0 && matrix[i * size + k] != matrix[i * size + j]) break;
-                    
-                else if(matrix[i * size + k] != 0 && matrix[i * size + k] == matrix[i * size + j])
+                if(matrix[i * size + k] != 0)
                 {
-                    matrix[i * size + j] = matrix[i * size + k] + matrix[i * size + j];
-                    matrix[i * size + k] = 0;
-                    break;
+                    if(matrix[i * size + k] != matrix[i * size + j])
+                        break;
+                    else
+                    {
+                        matrix[i * size + j] = matrix[i * size + k] + matrix[i * size + j];
+                        matrix[i * size + k] = 0;
+                        *current_score += matrix[i * size + j];
+                        break;
+                    }
                 }
             }
         }
@@ -51,7 +55,7 @@ void goRight(int * matrix, int size)
 }
 
 
-void goLeft(int * matrix, int size)
+void goLeft(int * matrix, int size, int * current_score)
 {
     int received_array[size*size];
 
@@ -63,17 +67,21 @@ void goLeft(int * matrix, int size)
 
             for(int k = j + 1; k < size ; k++)
             {
-                if(matrix[i * size + k] != 0 && matrix[i * size + k] != matrix[i * size + j])
-                    break;
-                    
-                else if(matrix[i * size + k] != 0 && matrix[i * size + k] == matrix[i * size + j])
+                if(matrix[i * size + k] != 0)
                 {
-                    matrix[i * size + j] = matrix[i * size + k] + matrix[i * size + j];
-                    matrix[i * size + k] = 0;
-                    break;
+                    if(matrix[i * size + k] != matrix[i * size + j])
+                        break;
+                    else
+                    {
+                        matrix[i * size + j] = matrix[i * size + k] + matrix[i * size + j];
+                        matrix[i * size + k] = 0;
+                        *current_score += matrix[i * size + j];
+                        break;
+                    }
                 }
             }
         }
+
         for(int j = 0; j < size; j++)
         {
             for(int k = 0; k < size; k++)
@@ -101,7 +109,7 @@ void goLeft(int * matrix, int size)
 }
 
 
-void goUp(int * matrix, int size)
+void goUp(int * matrix, int size, int * current_score)
 {
     int received_array[size*size];
 
@@ -113,16 +121,21 @@ void goUp(int * matrix, int size)
 
             for(int k = j + 1; k < size ; k++)
             {
-                if(matrix[k * size + i] != 0 && matrix[j * size + i] != matrix[k * size + i])
-                    break;
-                else if(matrix[k * size + i] != 0 && matrix[j * size + i] == matrix[k * size + i])
+                if(matrix[k * size + i] != 0)
                 {
-                    matrix[j * size + i] = matrix[j * size + i] + matrix[k * size + i];
-                    matrix[k * size + i] = 0;
-                    break;
+                    if(matrix[j * size + i] != matrix[k * size + i])
+                        break;
+                    else
+                    {
+                        matrix[j * size + i] = matrix[j * size + i] + matrix[k * size + i];
+                        matrix[k * size + i] = 0;
+                        *current_score += matrix[j * size + i];
+                        break;
+                    }
                 }
             }
         }
+
         for(int j = 0; j < size; j++)
         {
             for(int k = 0; k < size; k++)
@@ -150,7 +163,7 @@ void goUp(int * matrix, int size)
 }
 
 
-void goDown(int * matrix, int size)
+void goDown(int * matrix, int size, int * current_score)
 {
     int received_array[size*size];
 
@@ -162,16 +175,21 @@ void goDown(int * matrix, int size)
 
             for(int k = j - 1; k > - 1; k--)
             {
-                if(matrix[k * size + i] != 0 && matrix[j * size + i] != matrix[k * size + i])
-                    break;
-                else if(matrix[k * size + i] != 0 && matrix[j * size + i] == matrix[k * size + i])
+                if(matrix[k * size + i] != 0)
                 {
-                    matrix[j * size + i] = matrix[j * size + i] + matrix[k * size + i];
-                    matrix[k * size + i] = 0;
-                    break;
+                    if(matrix[j * size + i] != matrix[k * size + i])
+                        break;
+                    else
+                    {
+                        matrix[j * size + i] = matrix[j * size + i] + matrix[k * size + i];
+                        matrix[k * size + i] = 0;
+                        *current_score += matrix[j * size + i];
+                        break;
+                    }
                 }
             }
         }
+
         for(int j = size - 1; j > -1; j--)
         {
             for(int k = size - 1; k > - 1; k--)
@@ -205,12 +223,15 @@ void generateNewNumber(int * matrix, int size)
 
     max_number = size*size;
     
-    srand(time(NULL));
     random_number = rand() % max_number;
     new_block = random_number <= size ? 4 : 2;
 
-    for(int i = random_number; i < max_number; i++)
+    for(int i = random_number; i <= max_number; i++)
     {
+        if(i == max_number)
+        {
+            i = 0;
+        }
         if(matrix[i] == 0)
         {
             matrix[i] = new_block;

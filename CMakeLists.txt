@@ -28,7 +28,7 @@ add_compile_options(-Wall -Werror -Wno-error=uninitialized
 # Targets
 
 add_library("${ProjectName}"
-        src/events/plays.h
+        src/events/events.h
         src/events/plays.c
 )
 

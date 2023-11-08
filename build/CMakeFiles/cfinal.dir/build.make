@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\cfinal\cFinalProject
+CMAKE_SOURCE_DIR = C:\Users\muryl\Codes\cFinalProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\cfinal\cFinalProject\build
+CMAKE_BINARY_DIR = C:\Users\muryl\Codes\cFinalProject\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cfinal.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/cfinal.dir/flags.make
 
 CMakeFiles/cfinal.dir/src/events/plays.c.obj: CMakeFiles/cfinal.dir/flags.make
 CMakeFiles/cfinal.dir/src/events/plays.c.obj: CMakeFiles/cfinal.dir/includes_C.rsp
-CMakeFiles/cfinal.dir/src/events/plays.c.obj: C:/cfinal/cFinalProject/src/events/plays.c
+CMakeFiles/cfinal.dir/src/events/plays.c.obj: C:/Users/muryl/Codes/cFinalProject/src/events/plays.c
 CMakeFiles/cfinal.dir/src/events/plays.c.obj: CMakeFiles/cfinal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\cfinal\cFinalProject\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/cfinal.dir/src/events/plays.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cfinal.dir/src/events/plays.c.obj -MF CMakeFiles\cfinal.dir\src\events\plays.c.obj.d -o CMakeFiles\cfinal.dir\src\events\plays.c.obj -c C:\cfinal\cFinalProject\src\events\plays.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\muryl\Codes\cFinalProject\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/cfinal.dir/src/events/plays.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cfinal.dir/src/events/plays.c.obj -MF CMakeFiles\cfinal.dir\src\events\plays.c.obj.d -o CMakeFiles\cfinal.dir\src\events\plays.c.obj -c C:\Users\muryl\Codes\cFinalProject\src\events\plays.c
 
 CMakeFiles/cfinal.dir/src/events/plays.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/cfinal.dir/src/events/plays.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\cfinal\cFinalProject\src\events\plays.c > CMakeFiles\cfinal.dir\src\events\plays.c.i
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\muryl\Codes\cFinalProject\src\events\plays.c > CMakeFiles\cfinal.dir\src\events\plays.c.i
 
 CMakeFiles/cfinal.dir/src/events/plays.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/cfinal.dir/src/events/plays.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\cfinal\cFinalProject\src\events\plays.c -o CMakeFiles\cfinal.dir\src\events\plays.c.s
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\muryl\Codes\cFinalProject\src\events\plays.c -o CMakeFiles\cfinal.dir\src\events\plays.c.s
 
 # Object files for target cfinal
 cfinal_OBJECTS = \
@@ -93,7 +93,7 @@ cfinal_EXTERNAL_OBJECTS =
 libcfinal.a: CMakeFiles/cfinal.dir/src/events/plays.c.obj
 libcfinal.a: CMakeFiles/cfinal.dir/build.make
 libcfinal.a: CMakeFiles/cfinal.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\cfinal\cFinalProject\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libcfinal.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\muryl\Codes\cFinalProject\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libcfinal.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\cfinal.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\cfinal.dir\link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/cfinal.dir/clean:
 .PHONY : CMakeFiles/cfinal.dir/clean
 
 CMakeFiles/cfinal.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\cfinal\cFinalProject C:\cfinal\cFinalProject C:\cfinal\cFinalProject\build C:\cfinal\cFinalProject\build C:\cfinal\cFinalProject\build\CMakeFiles\cfinal.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\muryl\Codes\cFinalProject C:\Users\muryl\Codes\cFinalProject C:\Users\muryl\Codes\cFinalProject\build C:\Users\muryl\Codes\cFinalProject\build C:\Users\muryl\Codes\cFinalProject\build\CMakeFiles\cfinal.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/cfinal.dir/depend
 

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "./events/plays.h"
+#include "./events/events.h"
+#include <windows.h>
 
 
 void printMatrix(int * matrix, int size)
@@ -27,34 +28,39 @@ int main(void)
         matrix[i] = 0;
     }
 
+    generateNewNumber(matrix, size);
+    generateNewNumber(matrix, size);
 
-    matrix[0 * size + 2] = 2;
-    matrix[0 * size + 3] = 2;
-    matrix[0 * size + 1] = 4;
-    matrix[0 * size + 0] = 2;
+    for(;;) 
+    {
+        system("clear");
+        char option;
 
-    matrix[1 * size + 2] = 8;
-    matrix[1 * size + 3] = 4;
-    matrix[1 * size + 1] = 256;
-    matrix[1 * size + 0] = 256;
+        printMatrix(matrix, size);
+        scanf(" %c", &option);
 
-    matrix[2 * size + 2] = 8;
-    matrix[2 * size + 3] = 16;
-    matrix[2 * size + 1] = 8;
-    matrix[2 * size + 0] = 8;
+        switch (option)
+        {
+        case 'w':
+            goUp(matrix, size);
+            break;
+        case 'd':
+            goRight(matrix, size);
+            break;
+        case 'a':
+            goLeft(matrix, size);
+            break;
+        case 's':
+            goDown(matrix, size);
+            break;
 
-    matrix[3 * size + 2] = 32;
-    matrix[3 * size + 3] = 16;
-    matrix[3 * size + 1] = 16;
-    matrix[3 * size + 0] = 64;
+        default:
+            printf("\nNot a valid choice\n");
+            Sleep(1000);
+            break;
+        }
+    }
 
-    printMatrix(matrix, size);
-    // goRight(matrix, size);
-    goLeft(matrix, size);
-    printMatrix(matrix, size);
-    // goRight(matrix, size);
-    goLeft(matrix, size);
-    printMatrix(matrix, size);
-    
+    free(matrix);
     return 0;
 }

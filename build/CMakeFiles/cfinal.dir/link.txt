@@ -1,2 +1,0 @@
-C:\msys64\mingw64\bin\ar.exe qc libcfinal.a CMakeFiles/cfinal.dir/src/events/plays.c.obj CMakeFiles/cfinal.dir/src/game/rungame.c.obj
-C:\msys64\mingw64\bin\ranlib.exe libcfinal.a

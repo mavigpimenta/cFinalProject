@@ -1,4 +1,0 @@
-C:/Users/muryl/Codes/cFinalProject/build/CMakeFiles/cfinal.dir
-C:/Users/muryl/Codes/cFinalProject/build/CMakeFiles/cfinal-main.dir
-C:/Users/muryl/Codes/cFinalProject/build/CMakeFiles/edit_cache.dir
-C:/Users/muryl/Codes/cFinalProject/build/CMakeFiles/rebuild_cache.dir

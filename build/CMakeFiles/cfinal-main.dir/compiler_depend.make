@@ -3,6 +3,7 @@
 
 CMakeFiles/cfinal-main.dir/src/main.c.obj: C:/Users/muryl/Codes/cFinalProject/src/main.c \
   C:/Users/muryl/Codes/cFinalProject/src/events/events.h \
+  C:/Users/muryl/Codes/cFinalProject/src/game/rungame.h \
   C:/Users/muryl/Codes/cFinalProject/src/scores/scores.h \
   C:/msys64/mingw64/include/_bsd_types.h \
   C:/msys64/mingw64/include/_mingw.h \
@@ -294,6 +295,20 @@ C:/Users/muryl/Codes/cFinalProject/src/events/events.h:
 
 C:/Users/muryl/Codes/cFinalProject/src/scores/scores.h:
 
+C:/msys64/mingw64/include/winspool.h:
+
+C:/msys64/mingw64/include/namespaceapi.h:
+
+C:/msys64/mingw64/include/imm.h:
+
+C:/msys64/mingw64/include/_mingw.h:
+
+C:/msys64/mingw64/include/threadpoollegacyapiset.h:
+
+C:/msys64/mingw64/include/mciapi.h:
+
+C:/Users/muryl/Codes/cFinalProject/src/game/rungame.h:
+
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vpclmulqdqintrin.h:
 
 C:/msys64/mingw64/include/ioapiset.h:
@@ -307,18 +322,6 @@ C:/msys64/mingw64/include/pthread_time.h:
 C:/msys64/mingw64/include/bemapiset.h:
 
 C:/msys64/mingw64/include/_bsd_types.h:
-
-C:/msys64/mingw64/include/windef.h:
-
-C:/msys64/mingw64/include/_mingw_secapi.h:
-
-C:/msys64/mingw64/include/winspool.h:
-
-C:/msys64/mingw64/include/namespaceapi.h:
-
-C:/msys64/mingw64/include/imm.h:
-
-C:/msys64/mingw64/include/_mingw.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxifmaintrin.h:
 
@@ -336,9 +339,9 @@ C:/msys64/mingw64/include/_mingw_off_t.h:
 
 C:/msys64/mingw64/include/combaseapi.h:
 
-C:/msys64/mingw64/include/windows.h:
+C:/msys64/mingw64/include/windef.h:
 
-C:/msys64/mingw64/include/msxml.h:
+C:/msys64/mingw64/include/_mingw_secapi.h:
 
 C:/msys64/mingw64/include/debugapi.h:
 
@@ -436,10 +439,6 @@ C:/msys64/mingw64/include/objidl.h:
 
 C:/msys64/mingw64/include/malloc.h:
 
-C:/msys64/mingw64/include/threadpoollegacyapiset.h:
-
-C:/msys64/mingw64/include/mciapi.h:
-
 C:/msys64/mingw64/include/minwindef.h:
 
 C:/msys64/mingw64/include/memoryapi.h:
@@ -447,6 +446,10 @@ C:/msys64/mingw64/include/memoryapi.h:
 C:/msys64/mingw64/include/mmsystem.h:
 
 C:/msys64/mingw64/include/minwinbase.h:
+
+C:/msys64/mingw64/include/windows.h:
+
+C:/msys64/mingw64/include/msxml.h:
 
 C:/msys64/mingw64/include/namedpipeapi.h:
 

@@ -5,9 +5,6 @@
 #include "./game/rungame.h"
 
 
-
-
-
 int main(void)
 {
     srand(time(NULL));

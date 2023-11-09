@@ -37,10 +37,12 @@ void printMatrix(int * matrix, int size)
     printf("\n");
 }
 
+
 void printScore(int current_score)
 {
     printf("\n\n\033[0mScore: %i\n\n", current_score);
 }
+
 
 void runGameLoop(int * matrix, int size, int current_score)
 {

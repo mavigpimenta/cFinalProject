@@ -239,3 +239,33 @@ void generateNewNumber(int * matrix, int size)
         }
     }
 }
+
+int verifyMatrix(int * matrix, int size)
+{
+    for(int i = 0; i < size; i++)
+    {
+        for(int j = 0; j < size; j++)
+        {
+            if(matrix[i * size + j] == 0)
+                return 1;
+
+            else if(matrix[i * size + j] == matrix[i * size + j + 1])
+            {
+                return 1;
+            }
+            else if(matrix[i * size + j] == matrix[i * size + j - 1])
+            {
+                return 1;
+            }
+            else if(matrix[i * size + j] == matrix[(i - 1) * size + j])
+            {
+                return 1;
+            }
+            else if(matrix[i * size + j] == matrix[(i + 1) * size + j])
+            {
+                return 1;
+            }
+        }
+    }
+    return 0;
+}

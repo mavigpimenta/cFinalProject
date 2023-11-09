@@ -165,6 +165,30 @@ src/events/plays.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cfinal.dir\build.make CMakeFiles/cfinal.dir/src/events/plays.c.s
 .PHONY : src/events/plays.c.s
 
+src/game/rungame.obj: src/game/rungame.c.obj
+.PHONY : src/game/rungame.obj
+
+# target to build an object file
+src/game/rungame.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cfinal.dir\build.make CMakeFiles/cfinal.dir/src/game/rungame.c.obj
+.PHONY : src/game/rungame.c.obj
+
+src/game/rungame.i: src/game/rungame.c.i
+.PHONY : src/game/rungame.i
+
+# target to preprocess a source file
+src/game/rungame.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cfinal.dir\build.make CMakeFiles/cfinal.dir/src/game/rungame.c.i
+.PHONY : src/game/rungame.c.i
+
+src/game/rungame.s: src/game/rungame.c.s
+.PHONY : src/game/rungame.s
+
+# target to generate assembly for a file
+src/game/rungame.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cfinal.dir\build.make CMakeFiles/cfinal.dir/src/game/rungame.c.s
+.PHONY : src/game/rungame.c.s
+
 src/main.obj: src/main.c.obj
 .PHONY : src/main.obj
 
@@ -202,6 +226,9 @@ help:
 	@echo ... src/events/plays.obj
 	@echo ... src/events/plays.i
 	@echo ... src/events/plays.s
+	@echo ... src/game/rungame.obj
+	@echo ... src/game/rungame.i
+	@echo ... src/game/rungame.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

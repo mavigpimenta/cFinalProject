@@ -83,17 +83,34 @@ CMakeFiles/cfinal.dir/src/events/plays.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/cfinal.dir/src/events/plays.c.s"
 	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\muryl\Codes\cFinalProject\src\events\plays.c -o CMakeFiles\cfinal.dir\src\events\plays.c.s
 
+CMakeFiles/cfinal.dir/src/game/rungame.c.obj: CMakeFiles/cfinal.dir/flags.make
+CMakeFiles/cfinal.dir/src/game/rungame.c.obj: CMakeFiles/cfinal.dir/includes_C.rsp
+CMakeFiles/cfinal.dir/src/game/rungame.c.obj: C:/Users/muryl/Codes/cFinalProject/src/game/rungame.c
+CMakeFiles/cfinal.dir/src/game/rungame.c.obj: CMakeFiles/cfinal.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\muryl\Codes\cFinalProject\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/cfinal.dir/src/game/rungame.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cfinal.dir/src/game/rungame.c.obj -MF CMakeFiles\cfinal.dir\src\game\rungame.c.obj.d -o CMakeFiles\cfinal.dir\src\game\rungame.c.obj -c C:\Users\muryl\Codes\cFinalProject\src\game\rungame.c
+
+CMakeFiles/cfinal.dir/src/game/rungame.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/cfinal.dir/src/game/rungame.c.i"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\muryl\Codes\cFinalProject\src\game\rungame.c > CMakeFiles\cfinal.dir\src\game\rungame.c.i
+
+CMakeFiles/cfinal.dir/src/game/rungame.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/cfinal.dir/src/game/rungame.c.s"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\muryl\Codes\cFinalProject\src\game\rungame.c -o CMakeFiles\cfinal.dir\src\game\rungame.c.s
+
 # Object files for target cfinal
 cfinal_OBJECTS = \
-"CMakeFiles/cfinal.dir/src/events/plays.c.obj"
+"CMakeFiles/cfinal.dir/src/events/plays.c.obj" \
+"CMakeFiles/cfinal.dir/src/game/rungame.c.obj"
 
 # External object files for target cfinal
 cfinal_EXTERNAL_OBJECTS =
 
 libcfinal.a: CMakeFiles/cfinal.dir/src/events/plays.c.obj
+libcfinal.a: CMakeFiles/cfinal.dir/src/game/rungame.c.obj
 libcfinal.a: CMakeFiles/cfinal.dir/build.make
 libcfinal.a: CMakeFiles/cfinal.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\muryl\Codes\cFinalProject\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libcfinal.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\muryl\Codes\cFinalProject\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libcfinal.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\cfinal.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\cfinal.dir\link.txt --verbose=$(VERBOSE)
 

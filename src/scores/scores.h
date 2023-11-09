@@ -5,7 +5,4 @@
     #include <stdlib.h>
     #include <time.h>
 
-    void getHighscore();
-    void printScore(int * current_score);
-
 #endif //GAME_SCORES_H

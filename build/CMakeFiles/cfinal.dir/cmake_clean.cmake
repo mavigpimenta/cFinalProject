@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cfinal.dir/src/events/plays.c.obj"
   "CMakeFiles/cfinal.dir/src/events/plays.c.obj.d"
+  "CMakeFiles/cfinal.dir/src/game/rungame.c.obj"
+  "CMakeFiles/cfinal.dir/src/game/rungame.c.obj.d"
   "libcfinal.a"
   "libcfinal.pdb"
 )

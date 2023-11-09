@@ -3,6 +3,7 @@
 
 CMakeFiles/cfinal-main.dir/src/main.c.obj: C:/Users/muryl/Codes/cFinalProject/src/main.c \
   C:/Users/muryl/Codes/cFinalProject/src/events/events.h \
+  C:/Users/muryl/Codes/cFinalProject/src/scores/scores.h \
   C:/msys64/mingw64/include/_bsd_types.h \
   C:/msys64/mingw64/include/_mingw.h \
   C:/msys64/mingw64/include/_mingw_mac.h \
@@ -291,6 +292,8 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniint8intrin.h:
 
 C:/Users/muryl/Codes/cFinalProject/src/events/events.h:
 
+C:/Users/muryl/Codes/cFinalProject/src/scores/scores.h:
+
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vpclmulqdqintrin.h:
 
 C:/msys64/mingw64/include/ioapiset.h:
@@ -304,14 +307,6 @@ C:/msys64/mingw64/include/pthread_time.h:
 C:/msys64/mingw64/include/bemapiset.h:
 
 C:/msys64/mingw64/include/_bsd_types.h:
-
-C:/msys64/mingw64/include/windows.h:
-
-C:/msys64/mingw64/include/msxml.h:
-
-C:/msys64/mingw64/include/debugapi.h:
-
-C:/msys64/mingw64/include/_mingw_stdarg.h:
 
 C:/msys64/mingw64/include/windef.h:
 
@@ -340,6 +335,14 @@ C:/msys64/mingw64/include/corecrt_wstdlib.h:
 C:/msys64/mingw64/include/_mingw_off_t.h:
 
 C:/msys64/mingw64/include/combaseapi.h:
+
+C:/msys64/mingw64/include/windows.h:
+
+C:/msys64/mingw64/include/msxml.h:
+
+C:/msys64/mingw64/include/debugapi.h:
+
+C:/msys64/mingw64/include/_mingw_stdarg.h:
 
 C:/msys64/mingw64/include/ctype.h:
 

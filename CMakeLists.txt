@@ -30,6 +30,8 @@ add_compile_options(-Wall -Werror -Wno-error=uninitialized
 add_library("${ProjectName}"
         src/events/events.h
         src/events/plays.c
+        src/game/rungame.c
+        src/game/rungame.h
 )
 
 target_include_directories("${ProjectName}" PUBLIC "${CMAKE_SOURCE_DIR}")

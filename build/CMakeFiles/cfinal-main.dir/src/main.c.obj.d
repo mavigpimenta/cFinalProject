@@ -24,6 +24,8 @@ CMakeFiles/cfinal-main.dir/src/main.c.obj: \
  C:/msys64/mingw64/include/sec_api/sys/timeb_s.h \
  C:/msys64/mingw64/include/_timeval.h \
  C:/msys64/mingw64/include/pthread_time.h \
+ C:/Users/muryl/Codes/cFinalProject/src/scores/scores.h \
+ C:/Users/muryl/Codes/cFinalProject/src/game/rungame.h \
  C:/msys64/mingw64/include/windows.h \
  C:/msys64/mingw64/include/sdkddkver.h C:/msys64/mingw64/include/excpt.h \
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
@@ -234,4 +236,6 @@ CMakeFiles/cfinal-main.dir/src/main.c.obj: \
  C:/msys64/mingw64/include/commdlg.h C:/msys64/mingw64/include/stralign.h \
  C:/msys64/mingw64/include/sec_api/stralign_s.h \
  C:/msys64/mingw64/include/winsvc.h C:/msys64/mingw64/include/mcx.h \
- C:/msys64/mingw64/include/imm.h
+ C:/msys64/mingw64/include/imm.h \
+ C:/Users/muryl/Codes/cFinalProject/src/events/events.h \
+ C:/Users/muryl/Codes/cFinalProject/src/scores/scores.h

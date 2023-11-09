@@ -73,6 +73,7 @@ void runGameLoop(int * matrix, int size, int current_score)
             break;
         case 'o':
             run = 0;
+            printf("\nSee ya next time!\nYour score won't be saved.\n");
             break;
         default:
             printf("\nNot a valid choice\n");
@@ -80,6 +81,13 @@ void runGameLoop(int * matrix, int size, int current_score)
             break;
         }
 
-        run = verifyMatrix(matrix, size);
+        if(option != 'o')
+            run = verifyMatrix(matrix, size);
     }
+    
+    system("clear");
+    printMatrix(matrix, size);
+    printScore(current_score);
+    printf("\nGAME OVER\n");
+
 }

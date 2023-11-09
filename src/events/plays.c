@@ -249,19 +249,19 @@ int verifyMatrix(int * matrix, int size)
             if(matrix[i * size + j] == 0)
                 return 1;
 
-            else if(matrix[i * size + j] == matrix[i * size + j + 1])
+            else if(j < size - 1 && matrix[i * size + j] == matrix[i * size + j + 1])
             {
                 return 1;
             }
-            else if(matrix[i * size + j] == matrix[i * size + j - 1])
+            else if(j > 0 && matrix[i * size + j] == matrix[i * size + j - 1])
             {
                 return 1;
             }
-            else if(matrix[i * size + j] == matrix[(i - 1) * size + j])
+            else if(i > 0 && matrix[i * size + j] == matrix[(i - 1) * size + j])
             {
                 return 1;
             }
-            else if(matrix[i * size + j] == matrix[(i + 1) * size + j])
+            else if(i < size - 1 && matrix[i * size + j] == matrix[(i + 1) * size + j])
             {
                 return 1;
             }

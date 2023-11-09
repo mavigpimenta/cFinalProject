@@ -4,8 +4,14 @@
     #include <stdio.h>
     #include <stdlib.h>
     #include <time.h>
+    
+    typedef struct
+    {
+        char name[3];
+        int score;
+    } Score;
 
-    void getHighscore();
-    void printScore(int * current_score);
+    void getHighscores(int * current_score);
+    void printScoreFile(int * current_score);
 
 #endif //GAME_SCORES_H

@@ -1,0 +1,7 @@
+# ninja log v5
+2	230	7212351752635660	CMakeFiles/cfinal.dir/src/events/plays.c.obj	5dafb341c0a0aa73
+232	417	7212351754495767	libcfinal.a	6cf2e6d431417f66
+3	108	7212357441934085	CMakeFiles/cfinal.dir/src/scores/highscore.c.obj	36dae2ad626853c5
+109	244	7212357443285326	libcfinal.a	2479359de5322285
+8	794	7212357448763799	CMakeFiles/cfinal-main.dir/src/main.c.obj	4bc63650be8bbf65
+796	975	7212357450525745	cfinal-main.exe	b9a4a2f6d831f44c

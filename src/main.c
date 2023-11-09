@@ -87,7 +87,6 @@ int main(void)
             goDown(matrix, size, &current_score);
             break;
         case 'o':
-            highscore(current_score);
             break;
         default:
             printf("\nNot a valid choice\n");

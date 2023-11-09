@@ -1,0 +1,4 @@
+C:/Users/peppe/OneDrive/Documentos/cFinalProject/build-msys/CMakeFiles/cfinal.dir
+C:/Users/peppe/OneDrive/Documentos/cFinalProject/build-msys/CMakeFiles/cfinal-main.dir
+C:/Users/peppe/OneDrive/Documentos/cFinalProject/build-msys/CMakeFiles/edit_cache.dir
+C:/Users/peppe/OneDrive/Documentos/cFinalProject/build-msys/CMakeFiles/rebuild_cache.dir

@@ -58,6 +58,13 @@ build CMakeFiles/cfinal.dir/src/scores/highscore.c.obj: C_COMPILER__cfinal_unsca
   OBJECT_DIR = CMakeFiles\cfinal.dir
   OBJECT_FILE_DIR = CMakeFiles\cfinal.dir\src\scores
 
+build CMakeFiles/cfinal.dir/src/game/rungame.c.obj: C_COMPILER__cfinal_unscanned_ C$:/Users/peppe/OneDrive/Documentos/cFinalProject/src/game/rungame.c || cmake_object_order_depends_target_cfinal
+  DEP_FILE = CMakeFiles\cfinal.dir\src\game\rungame.c.obj.d
+  FLAGS = -std=gnu2x -Wall -Werror -Wno-error=uninitialized
+  INCLUDES = -IC:/Users/peppe/OneDrive/Documentos/cFinalProject
+  OBJECT_DIR = CMakeFiles\cfinal.dir
+  OBJECT_FILE_DIR = CMakeFiles\cfinal.dir\src\game
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target cfinal
@@ -66,7 +73,7 @@ build CMakeFiles/cfinal.dir/src/scores/highscore.c.obj: C_COMPILER__cfinal_unsca
 #############################################
 # Link the static library libcfinal.a
 
-build libcfinal.a: C_STATIC_LIBRARY_LINKER__cfinal_ CMakeFiles/cfinal.dir/src/events/plays.c.obj CMakeFiles/cfinal.dir/src/scores/highscore.c.obj
+build libcfinal.a: C_STATIC_LIBRARY_LINKER__cfinal_ CMakeFiles/cfinal.dir/src/events/plays.c.obj CMakeFiles/cfinal.dir/src/scores/highscore.c.obj CMakeFiles/cfinal.dir/src/game/rungame.c.obj
   OBJECT_DIR = CMakeFiles\cfinal.dir
   POST_BUILD = cd .
   PRE_LINK = cd .

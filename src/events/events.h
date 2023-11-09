@@ -11,5 +11,6 @@
     void goDown(int * matrix, int size, int * current_score);
 
     void generateNewNumber(int * matrix, int size);
+    int verifyMatrix(int * matrix, int size);
 
 #endif //GAME_EVENTS_H

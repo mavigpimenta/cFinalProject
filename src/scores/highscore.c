@@ -1,12 +1,12 @@
 #include "./scores.h"
-#include <math.h>
 
 void printScoreFile(int * current_score)
 {
     FILE * file_highscores;
     file_highscores = fopen("scoreboard.txt", "r");
-    Score * highscores = malloc(sizeof(Score) * 6);
+    // Score * highscores = malloc(sizeof(Score) * 6);
     int line = 0;
+    char c;
 
     while ((c = fgetc(file_highscores)) != EOF) 
     {
@@ -23,19 +23,14 @@ void printScoreFile(int * current_score)
 
         for (int j = 4; j < 10; j++)
         {
-            score += aux[j] * pow(10, 9 - j)
+            score += aux[j] * pow(10, 9 - j);
         }
-        if (current_score > score)
+        if (*current_score > score)
         {
-            
-            score = current_score;
-
+            score = *current_score;
         }
         line++;
     }
-}
 
-void getHighscores(int * current_score)
-{
-
+    fclose(file_highscores);
 }

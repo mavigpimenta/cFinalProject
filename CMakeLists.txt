@@ -32,6 +32,8 @@ add_library("${ProjectName}"
         src/events/plays.c
         src/scores/scores.h
         src/scores/highscore.c
+        src/game/rungame.c
+        src/game/rungame.h
 )
 
 target_include_directories("${ProjectName}" PUBLIC "${CMAKE_SOURCE_DIR}")

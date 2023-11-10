@@ -89,5 +89,4 @@ void runGameLoop(int * matrix, int size, int current_score)
     printMatrix(matrix, size);
     printScore(current_score);
     printf("\nGAME OVER\n");
-
 }

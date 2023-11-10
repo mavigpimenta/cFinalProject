@@ -1,8 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "./events/events.h"
 #include "./scores/scores.h"
 #include "./game/rungame.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 
 int main(void)
@@ -21,6 +21,8 @@ int main(void)
     generateNewNumber(matrix, size);
 
     runGameLoop(matrix, size, current_score);
+
+    saveScore(30);
 
     free(matrix);
     return 0;

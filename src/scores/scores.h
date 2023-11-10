@@ -2,17 +2,16 @@
 #define GAME_SCORES_H
 
     #include <stdio.h>
+    #include <string.h>
     #include <stdlib.h>
-    #include <time.h>
-    #include <math.h>
     
     typedef struct
     {
-        char name[3];
-        int score;
+        char name[4];
+        char score[7];
     } Score;
 
-    void getHighscores(int * current_score);
-    void printScoreFile(int * current_score);
+    void saveScore(int player_score, char player_name);
+
 
 #endif //GAME_SCORES_H

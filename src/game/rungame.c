@@ -1,83 +1,58 @@
 #include "./rungame.h"
 
 
-void printMatrix(int * matrix, int size)
-{
-    for(int i = 0; i < size; i++)
-    {
-        for(int j = 0; j < size; j++)
-        {
-            switch (matrix[i * size + j])
-            {
-            case 0:
-                printf("\033[0m%i\t", matrix[i * size + j]);
-                break;
-            case 2:
-                printf("\033[31m%i\t", matrix[i * size + j]);
-                break;
-            case 4:
-                printf("\033[32m%i\t", matrix[i * size + j]);
-                break;
-            case 8:
-                printf("\033[33m%i\t", matrix[i * size + j]);
-                break;
-            case 16:
-                printf("\033[34m%i\t", matrix[i * size + j]);
-                break;
-            case 32:
-                printf("\033[35m%i\t", matrix[i * size + j]);
-                break;
-            default:
-                printf("\033[36m%i\t", matrix[i * size + j]);
-                break;
-            }
-        }
-        printf("\n\n\n");
-    }
-    printf("\n");
-}
-
-
-void printScore(int current_score)
-{
-    printf("\n\n\033[0mScore: %i\n\n", current_score);
-}
-
-
-void runGameLoop(int * matrix, int size, int current_score)
+void runGameLoop(int * matrix, int size, int * current_score)
 {
     int run = 1;
+    char option, confirm;
+
     
     while(run == 1) 
     {
-        system("clear");
-        char option;
 
-        printMatrix(matrix, size);
-        printScore(current_score);
-        scanf(" %c", &option);
+        MOVE_HOME();
+        ERASE_ALL();
+        printGame(matrix, size, *current_score);
+        fflush(stdout);
+        option = getch();
 
         switch (option)
         {
         case 'w':
-            goUp(matrix, size, &current_score);
+        case 'W':
+        case 72:
+            goUp(matrix, size, current_score);
             break;
+
         case 'd':
-            goRight(matrix, size, &current_score);
+        case 'D':
+        case 77:
+            goRight(matrix, size, current_score);
             break;
+
         case 'a':
-            goLeft(matrix, size, &current_score);
+        case 'A':
+        case 75:
+            goLeft(matrix, size, current_score);
             break;
+            
         case 's':
-            goDown(matrix, size, &current_score);
+        case 'S':
+        case 80:
+            goDown(matrix, size, current_score);
             break;
+
         case 'o':
-            run = 0;
-            printf("\nSee ya next time!\nYour score won't be saved.\n");
-            break;
-        default:
-            printf("\nNot a valid choice\n");
-            Sleep(1000);
+        case 'O':
+            printf("\nAre you sure you wish to leave?\n\033[31mYour score won't be saved.\033[0m (y/n) ");
+            fflush(stdout);
+            scanf(" %c", &confirm);
+
+            if(confirm == 'y' || confirm == 'Y')
+            {
+                run = 0;
+                Sleep(2000);
+            }
             break;
         }
 
@@ -85,8 +60,9 @@ void runGameLoop(int * matrix, int size, int current_score)
             run = verifyMatrix(matrix, size);
     }
     
-    system("clear");
-    printMatrix(matrix, size);
-    printScore(current_score);
-    printf("\nGAME OVER\n");
+    MOVE_HOME();
+    ERASE_ALL();
+    printGame(matrix, size, *current_score);
+    printf("\n\033[31mGAME OVER\033[0m\n");
+    fflush(stdout);
 }

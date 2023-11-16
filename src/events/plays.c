@@ -21,7 +21,7 @@ void goRight(int * matrix, int size, int * current_score)
                     {
                         matrix[i * size + j] = matrix[i * size + k] + matrix[i * size + j];
                         matrix[i * size + k] = 0;
-                        *current_score += matrix[i * size + j];
+                        (*current_score) += matrix[i * size + j];
                         break;
                     }
                 }
@@ -75,7 +75,7 @@ void goLeft(int * matrix, int size, int * current_score)
                     {
                         matrix[i * size + j] = matrix[i * size + k] + matrix[i * size + j];
                         matrix[i * size + k] = 0;
-                        *current_score += matrix[i * size + j];
+                        (*current_score) += matrix[i * size + j];
                         break;
                     }
                 }
@@ -129,7 +129,7 @@ void goUp(int * matrix, int size, int * current_score)
                     {
                         matrix[j * size + i] = matrix[j * size + i] + matrix[k * size + i];
                         matrix[k * size + i] = 0;
-                        *current_score += matrix[j * size + i];
+                        (*current_score) += matrix[j * size + i];
                         break;
                     }
                 }
@@ -183,7 +183,7 @@ void goDown(int * matrix, int size, int * current_score)
                     {
                         matrix[j * size + i] = matrix[j * size + i] + matrix[k * size + i];
                         matrix[k * size + i] = 0;
-                        *current_score += matrix[j * size + i];
+                        (*current_score) += matrix[j * size + i];
                         break;
                     }
                 }
@@ -220,7 +220,6 @@ void goDown(int * matrix, int size, int * current_score)
 void generateNewNumber(int * matrix, int size)
 {
     int random_number, new_block, max_number;
-
     max_number = size*size;
     
     random_number = rand() % max_number;

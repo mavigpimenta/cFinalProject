@@ -5,11 +5,9 @@ void runGameLoop(int * matrix, int size, int * current_score)
 {
     int run = 1;
     char option, confirm;
-
     
     while(run == 1) 
     {
-
         MOVE_HOME();
         ERASE_ALL();
         printGame(matrix, size, *current_score);
@@ -63,6 +61,7 @@ void runGameLoop(int * matrix, int size, int * current_score)
     MOVE_HOME();
     ERASE_ALL();
     printGame(matrix, size, *current_score);
-    printf("\n\033[31mGAME OVER\033[0m\n");
+    printf("\n\t\033[31m#\tGAME OVER\t#\033[0m\n");
+    printf("\n\n\tpress Esc to leave...");
     fflush(stdout);
 }

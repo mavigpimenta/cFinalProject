@@ -3,24 +3,32 @@
 
 void goRight(int * matrix, int size, int * current_score)
 {
+    // a variable to save the old array
     int received_array[size*size];
 
+    // iterate through the lines
     for(int i = 0; i < size; i++)
     {
+        // iterate through the columns
         for(int j = size - 1; j > -1; j--)
         {
+            // save the old matrix, number by number
             received_array[i * size + j] = matrix[i * size + j];
 
+            // go to the next number that's not a zero
             for(int k = j - 1; k > - 1; k--)
             {
                 if(matrix[i * size + k] != 0)
                 {
+                    // if it's different, just skip
                     if(matrix[i * size + k] != matrix[i * size + j])
                         break;
                     else
                     {
+                        // if they're equal, join them
                         matrix[i * size + j] = matrix[i * size + k] + matrix[i * size + j];
                         matrix[i * size + k] = 0;
+                        // add the value of the new number to the score
                         (*current_score) += matrix[i * size + j];
                         break;
                     }
@@ -28,6 +36,7 @@ void goRight(int * matrix, int size, int * current_score)
             }
         }
 
+        // now move everyone to the chosen direction
         for(int j = size - 1; j > -1; j--)
         {
             for(int k = size - 1; k > - 1; k--)
@@ -44,8 +53,10 @@ void goRight(int * matrix, int size, int * current_score)
         }
     }
 
+    // iterate through the old and the new matrix, comparing numbers
     for(int i = 0; i < size*size; i++)
     {
+        // if any number changed, generate a new number in a random spot
         if(matrix[i] != received_array[i])
         {
             generateNewNumber(matrix, size);
@@ -241,30 +252,20 @@ void generateNewNumber(int * matrix, int size)
 
 int verifyMatrix(int * matrix, int size)
 {
+    // iterate through the matrix
     for(int i = 0; i < size; i++)
-    {
         for(int j = 0; j < size; j++)
-        {
+            // check if there are no zeros, then check if any number has a possible play
             if(matrix[i * size + j] == 0)
                 return 1;
-
             else if(j < size - 1 && matrix[i * size + j] == matrix[i * size + j + 1])
-            {
                 return 1;
-            }
             else if(j > 0 && matrix[i * size + j] == matrix[i * size + j - 1])
-            {
                 return 1;
-            }
             else if(i > 0 && matrix[i * size + j] == matrix[(i - 1) * size + j])
-            {
                 return 1;
-            }
             else if(i < size - 1 && matrix[i * size + j] == matrix[(i + 1) * size + j])
-            {
                 return 1;
-            }
-        }
-    }
+    // if there are no plays, return 0 and stop the game
     return 0;
 }

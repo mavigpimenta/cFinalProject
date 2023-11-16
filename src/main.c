@@ -12,7 +12,7 @@ int main(void)
     srand(time(NULL));
 
     int current_score = 0, size = 0;
-    char name[4];
+    char name[4], end;
 
     configureTerminal();
     HIDE_CURSOR();
@@ -34,7 +34,7 @@ int main(void)
 
     while(size < 2 || size > 8)
     {
-        printf("\n#                 What size do you want? (4 to 16)                  #\n\n");
+        printf("\n#                 What size do you want? (4 to 8)                   #\n\n");
         printf("                                 ");
         fflush(stdout);
         scanf("%i", &size);
@@ -63,6 +63,10 @@ int main(void)
     
     runGameLoop(matrix, size, &current_score);
     saveScore(current_score, name);
+
+
+    while ((end = getch()))
+        if(end == 27) break;
 
     free(matrix);
     return 0;
